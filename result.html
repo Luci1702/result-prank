@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>SPPU MCA Result Oct/Nov 2025</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #ece9e6, #ffffff);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .box {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            width: 300px;
+        }
+        
+        input {
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+        }
+        
+        button {
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+        
+        #loading,
+        #prank {
+            display: none;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <h2>SPPU MCA Result Oct/Nov 2025</h2>
+
+        <input type="text" id="seat" placeholder="Enter Seat Number">
+        <br>
+        <button onclick="checkResult()">View Result</button>
+
+        <div id="loading">⏳ Checking result...</div>
+        <div id="prank">😂😂 RESULT NOT DECLARED! Fuck You 🤯🎉</div>
+    </div>
+
+    <script>
+        function checkResult() {
+            let seat = document.getElementById("seat").value;
+
+            if (seat === "") {
+                alert("Please enter seat number");
+                return;
+            }
+
+            document.getElementById("loading").style.display = "block";
+
+            setTimeout(() => {
+                document.getElementById("loading").style.display = "none";
+                document.getElementById("prank").style.display = "block";
+            }, 3000);
+        }
+    </script>
+
+</body>
+
+</html>
