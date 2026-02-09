@@ -1,1 +1,1 @@
-# result-prank
+exam-result
